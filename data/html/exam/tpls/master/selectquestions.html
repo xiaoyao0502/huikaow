@@ -1,0 +1,161 @@
+		    	<script type="text/javascript">
+		    	function selectall(obj,a,b){
+		    		$(".sbox").prop('checked', $(obj).is(':checked'));
+		    		$(".sbox").each(function(){
+		    			selectquestions(this,a,b);
+		    		});
+		    	}
+		    	</script>
+		    	<form action="index.php?exam-master-exams-selectquestions" method="post" direct="modal-body">
+					<table class="table">
+						<tr>
+							<td class="form-inline">
+								录入时间：
+								<input type="text" name="search[stime]" size="9" class="input-small datetimepicker" data-date="2016-07-19" data-date-format="yyyy-mm-dd" id="stime" value=""/> - <input class="input-small datetimepicker" data-date="2016-07-19" data-date-format="yyyy-mm-dd" size="9" type="text" name="search[etime]" id="etime" value=""/>
+								关键字：
+								<input name="search[keyword]" class="input-small" size="8" type="text" value=""/>
+							</td>
+						</tr>
+						<tr>
+							<td class="form-inline">
+								<!-- <select name="search[questionisrows]" class="input-medium">
+						  		<option value="0">普通试题</option>
+								<option value="1">题帽题</option>
+						  		</select> -->
+						  		<select name="search[questiontype_child]" class="input-medium">
+							  		<option value="">选择子题型</option>
+							  		<option value="1">综合题</option>
+							  		<option value="2">组合选择题</option>
+							  		<option value="3">案例分析题</option>
+							  		<option value="4">计算分析题</option>
+							  	</select>
+								<input type="hidden" name="search[questiontype]" value="2">
+								<input type="hidden" name="search[questionsubjectid]" value="1">
+				        		录入人：<input name="search[username]" class="input-mini" size="5" type="text" value=""/>
+								<select name="search[questionlevel]" class="combox input-medium">
+							  		<option value="0">难度不限</option>
+									<option value="1">易</option>
+									<option value="2">中</option>
+									<option value="3">难</option>
+						  		</select>
+							</td>
+				        </tr>
+				        <tr>
+							<td class="form-inline">
+						  		<!-- <select name="search[questionsectionid]" class="combox input-medium" id="sectionselect" target="knowsselect" refUrl="?exam-master-questions-ajax-getknowsbysectionid&sectionid={value}">
+							  		<option value="">选择科目</option>
+							  									  									  		<option value="1">《银行业法律法规与综合能力》</option>
+							  									  								  		</select>
+						  		<select name="search[questionknowsid]" id="knowsselect" class="input-medium">
+							  		<option value="">选择章节</option>
+							  								  		</select>-->
+
+								<button class="btn btn-primary" type="submit">检索</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<div class="input"></div>
+								<table class="table table-hover">
+					<thead>
+						<tr>
+					        <th width="50"><input type="checkbox" onclick="javascript:selectall(this,'iselectquestions_2','ialreadyselectnumber_2');"/></th>
+					        <th width="100">试题类型</th>
+					        <th>试题内容</th>
+					        <th width="50">难度</th>
+						</tr>
+					</thead>
+					<tbody>
+										        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="8462" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="影响行业兴衰的主要因素包括（）。">影响行业兴衰的主要因素包括（）。</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="8458" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题-组合选择题</td>
+				          <td>
+						  	  <a href="javascript:;" title="中国银行业监督管理委员会的监管对象包括（）。">中国银行业监督管理委员会的监管对象包括（）。</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="403" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="《廉政准则》规定，党员领导干部不准干预和插手农村集体资金、资产和资源的（）等事项。（） -----
+
+&nbsp;">《廉政准则》规定，党员领导干部不准干预和插手农村集体资金、资...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="309" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="科学发展观要求，把加快经济发展，建立在( )的基础上.（）">科学发展观要求，把加快经济发展，建立在( )的基础上.（）</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="308" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="科学发展观着眼于( )，在发展道路、发展模式、发展战略、发展动力、发展目的和发展要求等方面提出了一系列新的思想观点.（）">科学发展观着眼于( )，在发展道路、发展模式、发展战略、发展动力...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="307" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="从马克思主义历史观来深刻认识和把握科学发展观，下列说法正确的有（）">从马克思主义历史观来深刻认识和把握科学发展观，下列说法正确的...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="306" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="坚持统筹发展，就是要统筹（）">坚持统筹发展，就是要统筹（）</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="305" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="坚持全面可持续发展，要全面推进（）">坚持全面可持续发展，要全面推进（）</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="304" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="坚持以人为本，就是要坚持（）">坚持以人为本，就是要坚持（）</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        				        <tr>
+				          <td><input rel="1" class="sbox" type="checkbox" name="ids[]" value="303" onclick="javascript:selectquestions(this,'iselectquestions_2','ialreadyselectnumber_2')"/></td>
+				          <td>多选题</td>
+				          <td>
+						  	  <a href="javascript:;" title="科学发展观，是对党的三代中央领导集体关于发展的重要思想的继承和发展，是( ).">科学发展观，是对党的三代中央领导集体关于发展的重要思想的继承...</a>
+						  </td>
+						  <td>易</td>
+				        </tr>
+				        					</tbody>
+				</table>
+				<div class="pagination pagination-right">
+	            	<ul><li><a href="#" class="current">1</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=2">2</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=3">3</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=4">4</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=5">5</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=6">6</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=7">7</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=8">8</a></li><li><a target="modal-body" class="ajax" href="index.php?exam-master-exams-selectquestions&search[questionsubjectid]=1&search[questionknowsid]=1&search[questiontype]=2&questionids=,8462,8458,403,309,308,307,306,305,304,303,&rowsquestionids=&0.5826712011765497&page=9">9</a></li><li><a>共83条数据</a></li></ul>
+		        </div>
+		    	<script type="text/javascript">
+		    		jQuery(function($) {
+						markSelectedQuestions('ids[]','iselectquestions_2');
+		    		});
+		    	</script>
+				

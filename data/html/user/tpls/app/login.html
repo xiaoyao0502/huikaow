@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="title" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title></title>
+<link href="app/core/styles/css/style.css" rel="stylesheet" type="text/css">
+<style>
+	html,body
+	{
+		height: 100%;
+	}
+</style>
+<!--JS-->
+<script type="text/javascript" src="app/core/styles/js/jquery-1.7.2.min.js"></script>
+</head><body>
+<div class="loginBox">
+	<div class="loginHalf">
+		<div><a><img src="app/core/styles/images/login_03.png"></a></div>
+	</div>
+	<div class="login">
+		<p class="loginTitle">登录慧考网</p>
+		<div class="loginInner clearFix">
+		<form class="form-horizontal logform" method="post" action="index.php?user-app-login">
+			<div class="loginInnerLeft">
+				<input class="input-xlarge" type="text" name="args[username]" datatype="userName" needle="needle" msg="请你输入手机号" value="peadmin"/>
+				<input class="input-xlarge" type="password" name="args[userpassword]" datatype="password" needle="needle" msg="请你输入密码" value="peadmin"/>
+				<input type="hidden" value="1" name="userlogin"/>
+				<div class="login_forget"><a>忘记密码？</a></div>
+				<button style="margin-top: 20px;" type="submit">登    录</button>
+				<div class="login_forget" style="text-align: center;">还没有慧考网账号？<a href="index.php?user-app-register" style="margin-left: 10px;">立即注册</a></div>
+			</div>
+			<div class="loginInnerRight">
+				<p>使用其他合作网站账号登录</p>
+				<div>
+					<a><img src="app/core/styles/images/login_07.png"></a>
+					<a><img src="app/core/styles/images/login_09.png"></a>
+				</div>
+				<h6><img src="app/core/styles/images/login_14.png"></h6>
+				<p style="margin-top: 5px;">使用其他合作网站账号登录</p>
+			</div>
+		</form>
+		</div>
+<div class="login_footer">
+			Copyright©北京普惠易融信息咨询有限公司 All rights reseorved   ICP备案号　京ICP备16005734号
+			<img src="app/core/styles/images/index_pic1_98.png">
+			<img src="app/core/styles/images/index_pic1_100.png">
+</div></div>
+</div>
+</body>
+</html>

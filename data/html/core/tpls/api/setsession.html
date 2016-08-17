@@ -1,0 +1,23 @@
+$(function(){
+	var ec = new evercookie();
+	ec.get("exam_psid", function(data){
+		if(!data || data.length != 32){
+			ec.set('exam_psid','&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;');
+		}
+		else
+		{
+			if(data != '&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;')
+			{
+				alert(data+'|'+'&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;');
+				window.location.reload();
+			}
+
+		}
+	});
+	var uec = new evercookie();
+	uec.get("exam_currentuser", function(data){
+		if(!data || data == ''){
+			ec.set('exam_currentuser','<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">');
+		}
+	});
+});
