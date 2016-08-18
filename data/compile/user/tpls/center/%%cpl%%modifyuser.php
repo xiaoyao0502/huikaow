@@ -1,104 +1,95 @@
 <?php $this->_compileInclude('header'); ?>
 <body>
 <?php $this->_compileInclude('nav'); ?>
-<div class="row-fluid">
-	<div class="container-fluid examcontent">
-		<div class="span2 exambox">
-			<div class="examform">
-				<div>
-					<?php $this->_compileInclude('menu'); ?>
-				</div>
+<div class="content">
+	<div class="testBottomBox clearFix">
+		<div class="centerBox">
+			<div class="centerLeft">
+				<div><img src="app/core/styles/images/kaoqian_03.png"></div>
+				<p>专属客服</p>
+				<span>售后小轩</span>
+				<span style="background-image: url(app/core/styles/images/center_06.png);">010-58468869</span>
+				<span style="background-image: url(app/core/styles/images/center_09.png);">2067277605</span>
+				<span style="background-image: url(app/core/styles/images/center_13.png);">2067277605@qq.com</span>
 			</div>
-		</div>
-		<div class="span10 exambox" id="datacontent">
-			<div class="examform">
-				<div>
-					<ul class="breadcrumb">
-						<li><a href="index.php?<?php echo $this->tpl_var['_app']; ?>-app">用户中心</a> <span class="divider">/</span></li>
-						<li class="active">隐私设置</li>
-					</ul>
-					<div id="tabs-694325" class="tabbable">
-						<ul class="nav nav-tabs">
-							<li class="active">
-								<a href="#panel-344373" data-toggle="tab">用户资料</a>
-							</li>
-							<li>
-								<a href="#panel-788885" data-toggle="tab">修改密码</a>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<div id="panel-344373" class="tab-pane active">
-								<form action="index.php?user-center-privatement" method="post" class="form-horizontal">
-									<fieldset>
-										<legend><?php echo $this->tpl_var['user']['username']; ?></legend>
-										<?php $fid = 0;
- foreach($this->tpl_var['forms'] as $key => $form){ 
- $fid++; ?>
-										<div class="control-group">
-											<label for="<?php echo $form['id']; ?>" class="control-label"><?php echo $form['title']; ?>：</label>
-											<div class="controls">
-											<?php echo $form['html']; ?>
-											</div>
-										</div>
-										<?php } ?>
-										<div class="control-group">
-											<div class="controls">
-												<button class="btn btn-primary" type="submit">提交</button>
-												<input type="hidden" name="modifyuserinfo" value="1"/>
-												<input type="hidden" name="page" value="<?php echo $this->tpl_var['page']; ?>"/>
-												<?php $aid = 0;
- foreach($this->tpl_var['search'] as $key => $arg){ 
- $aid++; ?>
-												<input type="hidden" name="search[<?php echo $key; ?>]" value="<?php echo $arg; ?>"/>
-												<?php } ?>
-											</div>
-										</div>
-									</fieldset>
-								</form>
-							</div>
-							<div id="panel-788885" class="tab-pane">
-								<form action="index.php?user-center-privatement" method="post" class="form-horizontal">
-									<fieldset>
-										<legend><?php echo $this->tpl_var['user']['username']; ?></legend>
-										<div class="control-group">
-											<label for="oldpassowrd" class="control-label">旧密码：</label>
-											<div class="controls">
-												<input id="oldpassowrd" type="password" name="oldpassword" needle="true" datatype="password" msg="密码字数必须在6位以上"/>
-											</div>
-										</div>
-										<div class="control-group">
-											<label for="passowrd1" class="control-label">新密码：</label>
-											<div class="controls">
-												<input id="passowrd1" type="password" name="args[password]" needle="true" datatype="password" msg="密码字数必须在6位以上"/>
-											</div>
-										</div>
-										<div class="control-group">
-											<label for="password2" class="control-label">重复密码：</label>
-											<div class="controls">
-												<input id="password2" type="password" name="args[password2]" needle="true" equ="passowrd1" msg="前后两次密码必须一致且不能为空"/>
-											</div>
-										</div>
-										<div class="control-group">
-											<div class="controls">
-												<button class="btn btn-primary" type="submit">提交</button>
-												<input type="hidden" name="modifyuserpassword" value="1"/>
-												<input type="hidden" name="page" value="<?php echo $this->tpl_var['page']; ?>"/>
-												<?php $aid = 0;
- foreach($this->tpl_var['search'] as $key => $arg){ 
- $aid++; ?>
-												<input type="hidden" name="search[<?php echo $key; ?>]" value="<?php echo $arg; ?>"/>
-												<?php } ?>
-											</div>
-										</div>
-									</fieldset>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="centerRight">
+				<p class="centerRightTitle">
+					<span>编辑个人信息</span>
+				</p>
+				<div class="examDiv1" style="padding: 20px 50px;">
+			    	<div class="examForm clearFix">
+			    		<p>昵称</p>
+			    		<input type="text" placeholder="请输入昵称" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>密码</p>
+			    		<input type="text" placeholder="请输入密码" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>姓名</p>
+			    		<input type="text" placeholder="请输入姓名" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>身份证号码</p>
+			    		<input type="text" placeholder="请输入身份证号码" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>通讯地址</p>
+			    		<select style="width: 110px;">
+						  <option value ="volvo">请选择</option>
+						  <option value ="saab">10小时</option>
+						  <option value="opel">10小时</option>
+						  <option value="audi">10小时</option>
+						</select>
+						<select style="width: 110px; margin-left: 10px;">
+						  <option value ="volvo">请选择</option>
+						  <option value ="saab">10小时</option>
+						  <option value="opel">10小时</option>
+						  <option value="audi">10小时</option>
+						</select>
+						<select style="width: 110px; margin-left: 10px;">
+						  <option value ="volvo">请选择</option>
+						  <option value ="saab">10小时</option>
+						  <option value="opel">10小时</option>
+						  <option value="audi">10小时</option>
+						</select>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>我的手机</p>
+			    		<input type="text" placeholder="请输入我的手机" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>QQ 号码</p>
+			    		<input type="text" placeholder="请输入QQ 号码" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>协会账号</p>
+			    		<input type="text" placeholder="请输入协会账号" />
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>协会密码</p>
+			    		<input type="text" placeholder="请输入协会密码" />
+			    	</div>
+			    	<div class="examForm clearFix">
+			    		<p>电子邮箱</p>
+			    		<input type="text" placeholder="请输入电子邮箱" />
+			    		<a style="float: left; color: #15ADEA; line-height: 40px; margin-left: 20px;">修改</a>
+			    	</div>
+			    	<div class="examBtn" style="width: 550px; margin-top: 30px;">
+				    	<a class="close-reveal-modal">保存设置</a>
+				    </div>
+			    				    	
+			    </div>
 			</div>
 		</div>
 	</div>
 </div>
+<?php $this->_compileInclude('foot'); ?>
 </body>
 </html>
