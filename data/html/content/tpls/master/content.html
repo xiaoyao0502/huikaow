@@ -38,7 +38,8 @@
 		<div class="span10" id="datacontent">
 			<ul class="breadcrumb">
 				<li><a href="index.php?content-master">内容模块</a> <span class="divider">/</span></li>
-								<li class="active">内容管理</li>
+								<li><a href="index.php?content-master-contents">内容管理</a> <span class="divider">/</span></li>
+				<li class="active">关于我们</li>
 							</ul>
 			<ul class="nav nav-tabs">
 				<li class="active">
@@ -47,12 +48,12 @@
 				<li class="dropdown pull-right">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">添加内容<strong class="caret"></strong></a>
 					<ul class="dropdown-menu">
-						<li><a href="index.php?content-master-contents-add&catid=&page=1">添加内容</a></li>
-						<li><a href="index.php?content-master-contents&catid=&page=1">上级分类</a></li>
+						<li><a href="index.php?content-master-contents-add&catid=3&page=1">添加内容</a></li>
+						<li><a href="index.php?content-master-contents&catid=0&page=1">上级分类</a></li>
 					</ul>
 				</li>
 			</ul>
-			<h4>所有内容</h4>
+			<h4>关于我们</h4>
 			<form action="index.php?content-master-contents" method="post">
 				<table class="table">
 			        <tr>
@@ -66,7 +67,7 @@
 							录入时间：
 						</td>
 						<td>
-							<input class="input-small datetimepicker" data-date="2016-07-13" data-date-format="yyyy-mm-dd" type="text" name="search[stime]" size="10" id="stime" value=""/> - <input class="input-small datetimepicker" data-date="2016-07-13" data-date-format="yyyy-mm-dd" size="10" type="text" name="search[etime]" id="etime" value=""/>
+							<input class="input-small datetimepicker" data-date="2016-08-22" data-date-format="yyyy-mm-dd" type="text" name="search[stime]" size="10" id="stime" value=""/> - <input class="input-small datetimepicker" data-date="2016-08-22" data-date-format="yyyy-mm-dd" size="10" type="text" name="search[etime]" id="etime" value=""/>
 						</td>
 						<td>
 							关键字：
@@ -88,6 +89,7 @@
 						<td>
 							<select name="search[contentmoduleid]" class="input-medium">
 						  		<option value="0">不限</option>
+						  								  		<option value="13">关于我们</option>
 						  								  		<option value="4">新闻</option>
 						  							  		</select>
 						</td>
@@ -106,6 +108,7 @@
 					            	<option value="">选择一级分类</option>
 					            						            	<option value="1">考试信息</option>
 					            						            	<option value="2">滚动图片</option>
+					            						            	<option value="3">关于我们</option>
 					            						            </select>
 				            </div>
 			        	</td>
@@ -132,78 +135,116 @@
 			            </thead>
 			            <tbody>
 			            				            	<tr>
-			                    <td><input type="checkbox" name="delids[2]" value="1"></td>
-			                    <td><input type="text" name="ids[2]" value="3" style="width:24px;padding:2px 5px;"/></td>
-			                    <td>2</td>
-			                    <td class="picture"><img src="files/attach/images/content/20150718/14372245738409.png" alt="" style="width:24px;"/></td>
-			                    <td>
-			                        广告一			                    </td>
-			                    <td>
-			                    	<a href="?content-master-contents&catid=2" target="">滚动图片</a>
-			                    </td>
-			                    <td>
-			                    	2014-10-26			                    </td>
-			                    <td class="actions">
-			                    	<div class="btn-group">
-			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=2&contentid=2&page=1" title="修改"><em class="icon-edit"></em></a>
-										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=2&page=1" title="删除"><em class="icon-remove"></em></a>
-			                    	</div>
-			                    </td>
-			                </tr>
-			                			            	<tr>
-			                    <td><input type="checkbox" name="delids[3]" value="1"></td>
-			                    <td><input type="text" name="ids[3]" value="2" style="width:24px;padding:2px 5px;"/></td>
-			                    <td>3</td>
-			                    <td class="picture"><img src="files/attach/images/content/20141026/14143066414697.jpg" alt="" style="width:24px;"/></td>
-			                    <td>
-			                        广告二			                    </td>
-			                    <td>
-			                    	<a href="?content-master-contents&catid=2" target="">滚动图片</a>
-			                    </td>
-			                    <td>
-			                    	2014-10-26			                    </td>
-			                    <td class="actions">
-			                    	<div class="btn-group">
-			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=2&contentid=3&page=1" title="修改"><em class="icon-edit"></em></a>
-										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=3&page=1" title="删除"><em class="icon-remove"></em></a>
-			                    	</div>
-			                    </td>
-			                </tr>
-			                			            	<tr>
-			                    <td><input type="checkbox" name="delids[4]" value="1"></td>
-			                    <td><input type="text" name="ids[4]" value="1" style="width:24px;padding:2px 5px;"/></td>
-			                    <td>4</td>
-			                    <td class="picture"><img src="files/attach/images/content/20141026/14143066568097.jpg" alt="" style="width:24px;"/></td>
-			                    <td>
-			                        广告三			                    </td>
-			                    <td>
-			                    	<a href="?content-master-contents&catid=2" target="">滚动图片</a>
-			                    </td>
-			                    <td>
-			                    	2014-10-26			                    </td>
-			                    <td class="actions">
-			                    	<div class="btn-group">
-			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=2&contentid=4&page=1" title="修改"><em class="icon-edit"></em></a>
-										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=4&page=1" title="删除"><em class="icon-remove"></em></a>
-			                    	</div>
-			                    </td>
-			                </tr>
-			                			            	<tr>
-			                    <td><input type="checkbox" name="delids[1]" value="1"></td>
-			                    <td><input type="text" name="ids[1]" value="0" style="width:24px;padding:2px 5px;"/></td>
-			                    <td>1</td>
+			                    <td><input type="checkbox" name="delids[10]" value="1"></td>
+			                    <td><input type="text" name="ids[10]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>10</td>
 			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
 			                    <td>
-			                        新中大道大学城易购商业广场10余间简易旺铺临街“排排坐”			                    </td>
+			                        服务中心			                    </td>
 			                    <td>
-			                    	<a href="?content-master-contents&catid=1" target="">考试信息</a>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
 			                    </td>
 			                    <td>
-			                    	2014-10-26			                    </td>
+			                    	2016-08-22			                    </td>
 			                    <td class="actions">
 			                    	<div class="btn-group">
-			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=1&contentid=1&page=1" title="修改"><em class="icon-edit"></em></a>
-										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=1&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=10&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=10&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    	</div>
+			                    </td>
+			                </tr>
+			                			            	<tr>
+			                    <td><input type="checkbox" name="delids[9]" value="1"></td>
+			                    <td><input type="text" name="ids[9]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>9</td>
+			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
+			                    <td>
+			                        联系我们			                    </td>
+			                    <td>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
+			                    </td>
+			                    <td>
+			                    	2016-08-22			                    </td>
+			                    <td class="actions">
+			                    	<div class="btn-group">
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=9&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=9&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    	</div>
+			                    </td>
+			                </tr>
+			                			            	<tr>
+			                    <td><input type="checkbox" name="delids[8]" value="1"></td>
+			                    <td><input type="text" name="ids[8]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>8</td>
+			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
+			                    <td>
+			                        工作机会			                    </td>
+			                    <td>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
+			                    </td>
+			                    <td>
+			                    	2016-08-22			                    </td>
+			                    <td class="actions">
+			                    	<div class="btn-group">
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=8&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=8&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    	</div>
+			                    </td>
+			                </tr>
+			                			            	<tr>
+			                    <td><input type="checkbox" name="delids[7]" value="1"></td>
+			                    <td><input type="text" name="ids[7]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>7</td>
+			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
+			                    <td>
+			                        合作伙伴			                    </td>
+			                    <td>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
+			                    </td>
+			                    <td>
+			                    	2016-08-22			                    </td>
+			                    <td class="actions">
+			                    	<div class="btn-group">
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=7&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=7&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    	</div>
+			                    </td>
+			                </tr>
+			                			            	<tr>
+			                    <td><input type="checkbox" name="delids[6]" value="1"></td>
+			                    <td><input type="text" name="ids[6]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>6</td>
+			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
+			                    <td>
+			                        团队介绍			                    </td>
+			                    <td>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
+			                    </td>
+			                    <td>
+			                    	2016-08-19			                    </td>
+			                    <td class="actions">
+			                    	<div class="btn-group">
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=6&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=6&page=1" title="删除"><em class="icon-remove"></em></a>
+			                    	</div>
+			                    </td>
+			                </tr>
+			                			            	<tr>
+			                    <td><input type="checkbox" name="delids[5]" value="1"></td>
+			                    <td><input type="text" name="ids[5]" value="0" style="width:24px;padding:2px 5px;"/></td>
+			                    <td>5</td>
+			                    <td class="picture"><img src="app/core/styles/images/noupload.gif" alt="" style="width:24px;"/></td>
+			                    <td>
+			                        公司介绍			                    </td>
+			                    <td>
+			                    	<a href="?content-master-contents&catid=3" target="">关于我们</a>
+			                    </td>
+			                    <td>
+			                    	2016-08-19			                    </td>
+			                    <td class="actions">
+			                    	<div class="btn-group">
+			                    		<a class="btn" href="index.php?content-master-contents-edit&catid=3&contentid=5&page=1" title="修改"><em class="icon-edit"></em></a>
+										<a class="btn confirm" href="index.php?content-master-contents-del&catid=&contentid=5&page=1" title="删除"><em class="icon-remove"></em></a>
 			                    	</div>
 			                    </td>
 			                </tr>
@@ -232,7 +273,7 @@
 				            	<button class="btn btn-primary" type="submit">提交</button>
 				            </label>
 				            <input type="hidden" name="modifycontentsequence" value="1"/>
-				            <input type="hidden" name="catid" value=""/>
+				            <input type="hidden" name="catid" value="3"/>
 				            <input type="hidden" name="page" value="1"/>
 				        </div>
 			        </div>
