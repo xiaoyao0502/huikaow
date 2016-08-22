@@ -17,10 +17,10 @@
 	<div class="headerMain">
 		<a class="logo"><img src="app/core/styles/images/index_pic1_03.png"></a>
 		<div class="headerBtn">
-			<a class="headerBtnAdd">首页</a>
-			<a>慧考课程</a>
-			<a>免费试用</a>
-			<a>关于我们</a>
+			<a id="h1" class="headerBtnAdd" href="index.php">首页</a>
+			<a id="h2" class="">慧考课程</a>
+			<a id="h3" class="">免费试用</a>
+			<a id="h4" class="" href="index.php?app-app-about_us">关于我们</a>
 		</div>
 		<p class="headerPhone"></p>
 	</div>

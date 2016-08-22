@@ -102,6 +102,18 @@ class app
 			$this->tpl->display($template);
 		}
 	}
+	public function about_us()
+	{
+		$catid=3;
+		$contents = $this->content->getContentList(array(array("AND","contentcatid = :contentcatid",'contentcatid',$catid)),1,10,'contentid ASC');
+    // $contentid=5;
+		// $content = $this->content->getContentById($contentid);
+		$this->tpl->assign('contents',$contents);
+    // var_dump($contents['data'][3]['contenttext']);die;
+    // var_dump($contents);die;
+		$this->tpl->display('about_us');
+	}
+
 }
 
 ?>

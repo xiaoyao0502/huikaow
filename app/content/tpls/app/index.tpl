@@ -3,7 +3,7 @@
 {x2;include:nav}
 <div class="lubo">
 	<ul class="lubo_box">
-		<li style=" opacity: 1;filter:alpha(opacity=100);"><a href="" style="background:url(images/index_pic_10.png) center top no-repeat"></a></li>
+		<li style=" opacity: 1;filter:alpha(opacity=100);"><a href="" style="background:url(app/core/styles/images/index_pic_10.png) center top no-repeat"></a></li>
 		<li><a href="" style="background:url(app/core/styles/images/index_pic_10.png) center top no-repeat"></a></li>
 		<li><a href="" style="background:url(app/core/styles/images/index_pic_10.png) center top no-repeat"></a></li>
 		<li><a href="" style="background:url(app/core/styles/images/index_pic_10.png) center top no-repeat"></a></li>
@@ -168,6 +168,7 @@
 
 
 {x2;include:foot}
+
 <script>
 $(function() {
     $('.banner').unslider({dots: true});
