@@ -1072,6 +1072,7 @@ a,button {
 	color: #fff;
 }
 .testLastBox{
+	display: none;
 	padding: 20px;
 }
 .testLastBox dl{
@@ -1253,7 +1254,11 @@ a,button {
 .examTitle a.examAdd{
 	background-color: #41bae9;
 }
+.examDiv1{
+	padding: 50px 0;
+}
 .examDiv{
+	display: none;
 	padding: 50px 0;
 }
 .examP{
